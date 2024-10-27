@@ -1,0 +1,77 @@
+1. Document Structure
+    v0:
+        Contains no <html>, <head>, or <body> tags, which makes it less structured and not fully compliant with HTML standards.
+    v1:
+        Includes <html>, <head>, and <body> tags, providing a complete HTML document structure. This is more appropriate for web development and ensures a predictable rendering.
+2. Head Section
+    v0:
+        Only includes a <title> tag within the body of the document.
+        Title Tag: <title>Zerodha: Online brokerage platfrom</title> has a typo ("platfrom" instead of "platform").
+    v1:
+        The <title> is placed within the <head> section, which is the correct location. The typo is corrected to "platform" in <title>Zerodha: Online brokerage platform</title>.
+        The structured <head> section allows for better organization and enables adding metadata in the future.
+3. Body Structure
+    v0:
+        Begins immediately with the main content, with no structured sections or semantics.
+    v1:
+        Contains a structured <body> element that organizes content into <header>, <main>, and <section> tags, improving semantics and readability.
+4. Header Section
+    v0:
+        Uses a single <div> to group the logo and navigation links.
+        Contains no additional styling except for the logo's width and <hr> tag as a separator.
+    v1:
+        Wraps the content in a <header> tag, adding semantic meaning to the header section.
+        Adds display: flex; justify-content: space-between; styling to the header <div>, creating a more organized layout with equal spacing.
+        Uses padding-top, padding-bottom, padding-left, and padding-right for consistent padding around the header area. This is absent in v0.
+5. Logo
+    v0:
+        Contains a single <img> tag for the logo: <img src="logo.svg" width="150" alt="zerodha_logo">.
+        Sets the width attribute to 150 pixels.
+    v1:
+        Uses <img src="logo.svg" width="170" alt="zerodha_logo"> in the header.
+        Adjusts the width to 170 pixels, making the logo slightly larger.
+        Placed within a <div> with flex styling, which positions it on the left side of the header for a cleaner layout.
+6. Navigation Links
+    v0:
+        Each navigation link (Signup, About, Products, Pricing, Support) is represented as a <a> tag with minimal styling.
+        Each link lacks padding or alignment styling, resulting in a basic list without structured spacing.
+    v1:
+        Wraps the links in a nested <div> with display: flex; justify-content: space-between;.
+        Each link is wrapped in its own <div> with padding-right: 20px;, providing consistent spacing between links.
+        Each <a> tag has additional styling: style="color: #666; text-decoration: none;", which removes the default underline and sets a muted color (#666), enhancing readability and appearance.
+7. Horizontal Rule
+    v0:
+        Uses <hr size="1" color="#eeeeee"> to add a thin, light grey horizontal line under the header.
+    v1:
+        Omits the <hr>, instead relying on padding and box-shadow for separation between sections, resulting in a cleaner design.
+8. Dashboard Image
+    v0:
+        Centers the dashboard image using the <center> tag: <center><img src="dashboard.png" width="900" alt="zerodha_dashborad"></img>></center>.
+        Contains a typo in the alt attribute: "zerodha_dashborad" instead of "zerodha_dashboard".
+    v1:
+        Uses <section> for the dashboard image, enhancing the semantics and structure of the content.
+        Centers the image using display: flex; justify-content: center;, avoiding the deprecated <center> tag.
+        Corrects the typo in the alt attribute to "Dashboard."
+9. Main Heading (Invest in everything)
+    v0:
+        Uses <center> to center the heading <h1>Invest in everything</h1>, with no additional styling.
+    v1:
+        Wraps the heading in a <section> with display: flex; justify-content: center;.
+        Adds inline styling to <h1>: color: #424242; font-weight: 400; font-size: 50px; font-family: sans-serif; margin: 0; padding: 0;.
+        These styles set the text color to a medium grey, specify the font-family as sans-serif, and control font size and weight for a more refined appearance.
+        Setting margin: 0; padding: 0; removes default spacing, which is not specified in v0.
+10. Subheading (Description Text)
+    v0:
+        Centers the subheading <h3>Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.</h3> using <center> without additional styling.
+    v1:
+        Wraps the subheading in a <section> with display: flex; justify-content: center;.
+        Adds inline styling to <h3>: color: #424242; font-family: sans-serif; font-weight: 400; font-size: 25px; margin: 0; padding: 0;.
+        This styling ensures consistency with the main heading, setting the font color, family, weight, and size.
+11. Signup Button
+    v0:
+        Uses a <button> element with basic text Sign up up for free.
+        No styling is applied, so it appears as a default HTML button.
+    v1:
+        Replaces <button> with an <a> tag styled to look like a button, which allows linking to an external form (href="/signupform").
+        Adds inline styling to the <a> tag: display: flex; justify-content: center; cursor: pointer; margin-top: 40px; margin-right: 650px; margin-left: 650px; padding-top: 10px; padding-bottom: 10px; border-radius: 3px; color: white; background-color: #387ED1; font-size: 20px; font-family: sans-serif; text-decoration: none;.
+        These styles ensure the button is centered, sets a pointer cursor for hover effect, applies a consistent color scheme with a blue background and white text, and removes the underline from the link.
